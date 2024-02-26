@@ -1,9 +1,11 @@
 package com.jorgegonzales.rest.webservices.restfulwebservices.filtering;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 //@JsonIgnoreProperties({"field1","field2"}) //ignore can be defined at the class level
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
 	private String field1;
 	//@JsonIgnore //or ignore can be defined at the property level
